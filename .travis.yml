@@ -1,0 +1,6 @@
+language: objective-c
+xcode_project: FastImage.xcodeproj
+xcode_scheme: FastImageTests
+branches:
+  only:
+    - master

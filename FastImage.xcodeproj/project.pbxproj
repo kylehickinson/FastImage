@@ -1,0 +1,379 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A1B48FCE1A0DD89F001BB364 /* KHIFastImage.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A1B48FCD1A0DD89F001BB364 /* KHIFastImage.h */; };
+		A1B48FD01A0DD89F001BB364 /* KHIFastImage.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B48FCF1A0DD89F001BB364 /* KHIFastImage.m */; };
+		A1B48FD61A0DD89F001BB364 /* libFastImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A1B48FCA1A0DD89F001BB364 /* libFastImage.a */; };
+		A1B48FE71A0E7570001BB364 /* KHIFastImageTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B48FE61A0E7570001BB364 /* KHIFastImageTest.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A1B48FD71A0DD89F001BB364 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A1B48FC21A0DD89F001BB364 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A1B48FC91A0DD89F001BB364;
+			remoteInfo = FastImage;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A1B48FC81A0DD89F001BB364 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				A1B48FCE1A0DD89F001BB364 /* KHIFastImage.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A1B48FCA1A0DD89F001BB364 /* libFastImage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFastImage.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1B48FCD1A0DD89F001BB364 /* KHIFastImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KHIFastImage.h; sourceTree = "<group>"; };
+		A1B48FCF1A0DD89F001BB364 /* KHIFastImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = KHIFastImage.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		A1B48FD51A0DD89F001BB364 /* FastImageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FastImageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1B48FDB1A0DD89F001BB364 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1B48FE61A0E7570001BB364 /* KHIFastImageTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = KHIFastImageTest.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A1B48FC71A0DD89F001BB364 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1B48FD21A0DD89F001BB364 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1B48FD61A0DD89F001BB364 /* libFastImage.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A1B48FC11A0DD89F001BB364 = {
+			isa = PBXGroup;
+			children = (
+				A1B48FCC1A0DD89F001BB364 /* FastImage */,
+				A1B48FD91A0DD89F001BB364 /* FastImageTests */,
+				A1B48FCB1A0DD89F001BB364 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A1B48FCB1A0DD89F001BB364 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A1B48FCA1A0DD89F001BB364 /* libFastImage.a */,
+				A1B48FD51A0DD89F001BB364 /* FastImageTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A1B48FCC1A0DD89F001BB364 /* FastImage */ = {
+			isa = PBXGroup;
+			children = (
+				A1B48FCD1A0DD89F001BB364 /* KHIFastImage.h */,
+				A1B48FCF1A0DD89F001BB364 /* KHIFastImage.m */,
+			);
+			path = FastImage;
+			sourceTree = "<group>";
+		};
+		A1B48FD91A0DD89F001BB364 /* FastImageTests */ = {
+			isa = PBXGroup;
+			children = (
+				A1B48FE61A0E7570001BB364 /* KHIFastImageTest.m */,
+				A1B48FDA1A0DD89F001BB364 /* Supporting Files */,
+			);
+			path = FastImageTests;
+			sourceTree = "<group>";
+		};
+		A1B48FDA1A0DD89F001BB364 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A1B48FDB1A0DD89F001BB364 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A1B48FC91A0DD89F001BB364 /* FastImage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1B48FDE1A0DD89F001BB364 /* Build configuration list for PBXNativeTarget "FastImage" */;
+			buildPhases = (
+				A1B48FC61A0DD89F001BB364 /* Sources */,
+				A1B48FC71A0DD89F001BB364 /* Frameworks */,
+				A1B48FC81A0DD89F001BB364 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FastImage;
+			productName = FastImage;
+			productReference = A1B48FCA1A0DD89F001BB364 /* libFastImage.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		A1B48FD41A0DD89F001BB364 /* FastImageTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1B48FE11A0DD89F001BB364 /* Build configuration list for PBXNativeTarget "FastImageTests" */;
+			buildPhases = (
+				A1B48FD11A0DD89F001BB364 /* Sources */,
+				A1B48FD21A0DD89F001BB364 /* Frameworks */,
+				A1B48FD31A0DD89F001BB364 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A1B48FD81A0DD89F001BB364 /* PBXTargetDependency */,
+			);
+			name = FastImageTests;
+			productName = FastImageTests;
+			productReference = A1B48FD51A0DD89F001BB364 /* FastImageTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A1B48FC21A0DD89F001BB364 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Kyle Hickinson";
+				TargetAttributes = {
+					A1B48FC91A0DD89F001BB364 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					A1B48FD41A0DD89F001BB364 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+				};
+			};
+			buildConfigurationList = A1B48FC51A0DD89F001BB364 /* Build configuration list for PBXProject "FastImage" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A1B48FC11A0DD89F001BB364;
+			productRefGroup = A1B48FCB1A0DD89F001BB364 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A1B48FC91A0DD89F001BB364 /* FastImage */,
+				A1B48FD41A0DD89F001BB364 /* FastImageTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A1B48FD31A0DD89F001BB364 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A1B48FC61A0DD89F001BB364 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1B48FD01A0DD89F001BB364 /* KHIFastImage.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1B48FD11A0DD89F001BB364 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1B48FE71A0E7570001BB364 /* KHIFastImageTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A1B48FD81A0DD89F001BB364 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A1B48FC91A0DD89F001BB364 /* FastImage */;
+			targetProxy = A1B48FD71A0DD89F001BB364 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A1B48FDC1A0DD89F001BB364 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A1B48FDD1A0DD89F001BB364 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A1B48FDF1A0DD89F001BB364 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A1B48FE01A0DD89F001BB364 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		A1B48FE21A0DD89F001BB364 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FastImageTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A1B48FE31A0DD89F001BB364 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FastImageTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A1B48FC51A0DD89F001BB364 /* Build configuration list for PBXProject "FastImage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1B48FDC1A0DD89F001BB364 /* Debug */,
+				A1B48FDD1A0DD89F001BB364 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1B48FDE1A0DD89F001BB364 /* Build configuration list for PBXNativeTarget "FastImage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1B48FDF1A0DD89F001BB364 /* Debug */,
+				A1B48FE01A0DD89F001BB364 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1B48FE11A0DD89F001BB364 /* Build configuration list for PBXNativeTarget "FastImageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1B48FE21A0DD89F001BB364 /* Debug */,
+				A1B48FE31A0DD89F001BB364 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A1B48FC21A0DD89F001BB364 /* Project object */;
+}
