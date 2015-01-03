@@ -1,4 +1,5 @@
-# FastImage
+# FastImage 
+[![Build Status](https://travis-ci.org/kylehickinson/FastImage.svg)](https://travis-ci.org/kylehickinson/FastImage)
 
 FastImage is an Objective-C port of the [Ruby project by Stephen Sykes](https://github.com/sdsykes/fastimage). It's directive is to request as little data as possible (usually just the first batch of bytes returned by a request) to determine the size and type of a remote image.
 
