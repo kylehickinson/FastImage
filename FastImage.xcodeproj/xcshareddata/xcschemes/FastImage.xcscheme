@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0610"
+   LastUpgradeVersion = "1010"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A1B48FC91A0DD89F001BB364"
-               BuildableName = "libFastImage.a"
+               BlueprintIdentifier = "27CF938D223352940093543E"
+               BuildableName = "FastImage.framework"
                BlueprintName = "FastImage"
                ReferencedContainer = "container:FastImage.xcodeproj">
             </BuildableReference>
@@ -23,8 +23,8 @@
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
@@ -37,10 +37,10 @@
       </BuildActionEntries>
    </BuildAction>
    <TestAction
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      buildConfiguration = "Debug">
+      shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
@@ -56,27 +56,30 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A1B48FC91A0DD89F001BB364"
-            BuildableName = "libFastImage.a"
+            BlueprintIdentifier = "27CF938D223352940093543E"
+            BuildableName = "FastImage.framework"
             BlueprintName = "FastImage"
             ReferencedContainer = "container:FastImage.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
+      <AdditionalOptions>
+      </AdditionalOptions>
    </TestAction>
    <LaunchAction
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Debug"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
+      debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A1B48FC91A0DD89F001BB364"
-            BuildableName = "libFastImage.a"
+            BlueprintIdentifier = "27CF938D223352940093543E"
+            BuildableName = "FastImage.framework"
             BlueprintName = "FastImage"
             ReferencedContainer = "container:FastImage.xcodeproj">
          </BuildableReference>
@@ -85,16 +88,16 @@
       </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
+      buildConfiguration = "Release"
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A1B48FC91A0DD89F001BB364"
-            BuildableName = "libFastImage.a"
+            BlueprintIdentifier = "27CF938D223352940093543E"
+            BuildableName = "FastImage.framework"
             BlueprintName = "FastImage"
             ReferencedContainer = "container:FastImage.xcodeproj">
          </BuildableReference>

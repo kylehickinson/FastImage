@@ -1,7 +1,8 @@
-language: objective-c
+language: swift
+osx_image: xcode10.1
 xcode_project: FastImage.xcodeproj
 xcode_scheme: FastImageTests
-xcode_sdk: iphonesimulator8.1
+xcode_sdk: iphonesimulator12.1
 branches:
   only:
     - master
