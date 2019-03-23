@@ -3,6 +3,3 @@ osx_image: xcode10.1
 xcode_project: FastImage.xcodeproj
 xcode_scheme: FastImageTests
 xcode_sdk: iphonesimulator12.1
-branches:
-  only:
-    - master
