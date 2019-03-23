@@ -20,7 +20,6 @@ fastImage.imageSizeAndType(for: url, completion: { result in
   case .failure(let error):
     // Get a URLError here (timed out, etc.) or a SizeNotFoundError (just couldn't get a size based on data)
   }
-  e.fulfill()
 })
 ```
 
