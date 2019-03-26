@@ -21,15 +21,13 @@ extension Data {
   }
   func read<ResultType>(_ range: Range<Data.Index>) throws -> ResultType {
     if range.upperBound <= count {
-      return subdata(in: range).withUnsafeBytes({ $0.pointee })
+      return subdata(in: range).withUnsafeBytes { $0.load(as: ResultType.self) }
     }
     throw AccessError(range: range, data: self)
   }
   func readBytes(_ range: Range<Data.Index>) throws -> [UInt8] {
     if range.upperBound <= count {
-      return subdata(in: range).withUnsafeBytes { bytes in
-        Array(UnsafeBufferPointer(start: bytes, count: range.count / MemoryLayout<UInt8>.stride))
-      }
+      return subdata(in: range).withUnsafeBytes { [UInt8]($0) }
     }
     throw AccessError(range: range, data: self)
   }

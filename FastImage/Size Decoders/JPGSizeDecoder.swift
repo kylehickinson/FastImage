@@ -72,7 +72,11 @@ final class JPGSizeDecoder: ImageSizeDecoder {
           if exifString == "Exif" {
             let exifData = data.advanced(by: offset + 8)
             if let exif = try? Exif(data: exifData), imageOrientation == nil {
+              #if swift(>=5.0)
+              imageOrientation = exif.orientation
+              #else
               imageOrientation = exif?.orientation
+              #endif
             }
           }
           offset += Int(exifLength)
