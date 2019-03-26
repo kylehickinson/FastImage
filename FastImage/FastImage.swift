@@ -13,6 +13,11 @@ public enum Result<T> {
   case failure(Error)
 }
 
+/// An error thrown when there are no size decoders that can decode the given image
+public struct UnsupportedImageError: Error {
+  public let data: Data
+}
+
 /// FastImage is an Swift port of the Ruby project by Stephen Sykes. It's directive is too
 /// request as little data as possible (usually just the first batch of bytes returned by a request),
 /// to determine the size and type of a remote image.
@@ -99,7 +104,13 @@ public final class FastImage: NSObject {
   
   private func parse(request: Request) {
     let data = request.data
+    if data.isEmpty { return }
     guard let decoder = decoder(for: data) else {
+      request.completion(.failure(UnsupportedImageError(data: data)))
+      request.task.cancel()
+      if let urlString = request.task.originalRequest?.url?.absoluteString {
+        requests.removeValue(forKey: urlString)
+      }
       return
     }
     do {

@@ -56,12 +56,6 @@ private let goodFixtures: [GoodFixture] = [
 //  GoodFixture("test4.svg",  271, 271, .svg),
 ]
 
-private let badFixtures = [
-  "faulty.jpg",
-  "a.CR2",
-  "a.CRW"
-]
-
 class FastImageTests: XCTestCase {
   
   var fastImage: FastImage!
@@ -92,7 +86,8 @@ class FastImageTests: XCTestCase {
     }
   }
   
-  func testBadFixtures() {
+  func testSizeNotFoundFixtures() {
+    let badFixtures = ["faulty.jpg"]
     for filename in badFixtures {
       let expectation = self.expectation(description: filename)
       let url = URL(string: "\(testFixturesBaseURL)\(filename)")!
@@ -103,6 +98,27 @@ class FastImageTests: XCTestCase {
           XCTFail("Should have failed to get the size / type of \(filename)")
         case .failure(let error):
           XCTAssertTrue(error is SizeNotFoundError)
+        }
+        expectation.fulfill()
+      }
+      waitForExpectations(timeout: self.fastImage.requestTimeout + 2.0)
+    }
+  }
+  
+  func testUnsupportedImageFormats() {
+    fastImage.requestTimeout = 30.0
+    
+    let images = ["a.CR2", "a.CRW"]
+    for filename in images {
+      let expectation = self.expectation(description: filename)
+      let url = URL(string: "\(testFixturesBaseURL)\(filename)")!
+      
+      fastImage.imageSizeAndType(for: url) { result in
+        switch result {
+        case .success:
+          XCTFail("Should have failed to get the size / type of \(filename)")
+        case .failure(let error):
+          XCTAssertTrue(error is UnsupportedImageError)
         }
         expectation.fulfill()
       }
