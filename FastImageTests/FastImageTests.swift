@@ -70,7 +70,6 @@ class FastImageTests: XCTestCase {
     for fixture in goodFixtures {
       let e = expectation(description: fixture.name)
       let url = fixture.name.contains("http") ? URL(string: fixture.name)! : URL(string: "\(testFixturesBaseURL)\(fixture.name)")!
-      XCTAssertNotNil(try? Data(contentsOf: url))
       
       fastImage.imageSizeAndType(for: url, completion: { result in
         switch result {
@@ -108,7 +107,7 @@ class FastImageTests: XCTestCase {
   func testUnsupportedImageFormats() {
     fastImage.requestTimeout = 30.0
     
-    let images = ["a.CR2", "a.CRW"]
+    let images = ["a.CR2", "a.CRW", "test.xml"]
     for filename in images {
       let expectation = self.expectation(description: filename)
       let url = URL(string: "\(testFixturesBaseURL)\(filename)")!
@@ -146,5 +145,20 @@ class FastImageTests: XCTestCase {
     waitForExpectations(timeout: self.fastImage.requestTimeout + 2.0)
   }
   
-  
+  func testDataURI() {
+    let e = expectation(description: "Data URI")
+    let url = URL(string: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAABCAYAAAD0In+KAAAAD0lEQVR42mNk+M9QzwAEAAmGAYCF+yOnAAAAAElFTkSuQmCC")!
+    
+    fastImage.imageSizeAndType(for: url, completion: { result in
+      switch result {
+      case .success(let (size, type)):
+        XCTAssertEqual(type, .png)
+        XCTAssertEqual(size, CGSize(width: 2, height: 1), "Data URI - Sizes do not match")
+      case .failure(let error):
+        XCTFail("Data URI failed with error: \(error.localizedDescription)")
+      }
+      e.fulfill()
+    })
+    waitForExpectations(timeout: fastImage.requestTimeout + 2.0)
+  }
 }
