@@ -20,10 +20,10 @@ protocol ImageSizeDecoder {
   ///
   /// For example, a GIF size decoder will check the first 3 bytes to see if they match "GIF"
   ///
-  /// - throws: DataAccessError
+  /// - throws: Data.AccessError
   static func isDecoder(for data: Data) throws -> Bool
   /// Get the size of the image given the data available
   ///
-  /// - throws: SizeNotFoundError, DataAccessError
+  /// - throws: SizeNotFoundError, Data.AccessError
   static func size(for data: Data) throws -> CGSize
 }

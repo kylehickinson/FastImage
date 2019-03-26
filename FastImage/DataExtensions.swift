@@ -9,7 +9,7 @@
 import Foundation
 
 extension Data {
-  struct DataAccessError: Error {
+  struct AccessError: Error {
     let range: Range<Data.Index>
     let data: Data
   }
@@ -20,18 +20,18 @@ extension Data {
     return try read(index..<index+1) as UInt8
   }
   func read<ResultType>(_ range: Range<Data.Index>) throws -> ResultType {
-    if range.upperBound < count {
+    if range.upperBound <= count {
       return subdata(in: range).withUnsafeBytes({ $0.pointee })
     }
-    throw DataAccessError(range: range, data: self)
+    throw AccessError(range: range, data: self)
   }
   func readBytes(_ range: Range<Data.Index>) throws -> [UInt8] {
-    if range.upperBound < count {
+    if range.upperBound <= count {
       return subdata(in: range).withUnsafeBytes { bytes in
         Array(UnsafeBufferPointer(start: bytes, count: range.count / MemoryLayout<UInt8>.stride))
       }
     }
-    throw DataAccessError(range: range, data: self)
+    throw AccessError(range: range, data: self)
   }
 }
 

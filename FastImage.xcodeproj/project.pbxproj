@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27B63D652249AB5A004BCC5B /* DataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B63D642249AB5A004BCC5B /* DataTests.swift */; };
 		27CF9392223352940093543E /* FastImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 27CF9390223352940093543E /* FastImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		27CF9397223352C20093543E /* FastImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CF9396223352C20093543E /* FastImage.swift */; };
 		27CF939922335E490093543E /* FastImageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CF939822335E490093543E /* FastImageTests.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		27B63D642249AB5A004BCC5B /* DataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTests.swift; sourceTree = "<group>"; };
 		27CF938E223352940093543E /* FastImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FastImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		27CF9390223352940093543E /* FastImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FastImage.h; sourceTree = "<group>"; };
 		27CF9391223352940093543E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				27CF939822335E490093543E /* FastImageTests.swift */,
+				27B63D642249AB5A004BCC5B /* DataTests.swift */,
 				A1B48FDA1A0DD89F001BB364 /* Supporting Files */,
 			);
 			path = FastImageTests;
@@ -265,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27CF939922335E490093543E /* FastImageTests.swift in Sources */,
+				27B63D652249AB5A004BCC5B /* DataTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
