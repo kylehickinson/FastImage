@@ -161,4 +161,21 @@ class FastImageTests: XCTestCase {
     })
     waitForExpectations(timeout: fastImage.requestTimeout + 2.0)
   }
+  
+  func testInvalidStatusCode() {
+    let e = expectation(description: "Invalid Status Code")
+    let url = URL(string: "https://httpbin.org/status/403")!
+    fastImage.imageSizeAndType(for: url) { result in
+      switch result {
+      case .success(_):
+        XCTFail()
+      case .failure(let error as InvalidStatusCodeError):
+        XCTAssertEqual(error.statusCode, 403)
+      case .failure(let error):
+        XCTFail("Expected InvalidStatusCodeError, but received \(error)")
+      }
+      e.fulfill()
+    }
+    waitForExpectations(timeout: fastImage.requestTimeout + 2.0)
+  }
 }

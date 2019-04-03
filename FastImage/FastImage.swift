@@ -18,6 +18,10 @@ public struct UnsupportedImageError: Error {
   public let data: Data
 }
 
+public struct InvalidStatusCodeError: Error {
+  public let statusCode: Int
+}
+
 /// FastImage is an Swift port of the Ruby project by Stephen Sykes. It's directive is too
 /// request as little data as possible (usually just the first batch of bytes returned by a request),
 /// to determine the size and type of a remote image.
@@ -124,6 +128,21 @@ public final class FastImage: NSObject {
       // Not enough data
     }
   }
+  
+  private func validate(request: Request) -> Bool {
+    if let response = request.task.response as? HTTPURLResponse {
+      if !(200..<300).contains(response.statusCode) {
+        // Validate that the status code returned is a success code, otherwise fail
+        request.completion(.failure(InvalidStatusCodeError(statusCode: response.statusCode)))
+        if let urlString = request.task.originalRequest?.url?.absoluteString {
+          requests.removeValue(forKey: urlString)
+        }
+        request.task.cancel()
+        return false
+      }
+    }
+    return true
+  }
 }
 
 extension FastImage: URLSessionDataDelegate {
@@ -131,6 +150,9 @@ extension FastImage: URLSessionDataDelegate {
     guard let urlString = dataTask.originalRequest?.url?.absoluteString,
       let request = requests[urlString] else {
         return
+    }
+    if !validate(request: request) {
+      return
     }
     request.data.append(data)
     if (!request.data.isEmpty) {
@@ -144,6 +166,9 @@ extension FastImage: URLSessionDataDelegate {
     guard let urlString = task.originalRequest?.url?.absoluteString,
       let request = requests[urlString] else {
         return
+    }
+    if !validate(request: request) {
+      return
     }
     request.completion(.failure(error ?? SizeNotFoundError(data: request.data)))
     requests.removeValue(forKey: urlString)
