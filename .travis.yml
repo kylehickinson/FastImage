@@ -1,5 +1,0 @@
-language: swift
-osx_image: xcode10.1
-xcode_project: FastImage.xcodeproj
-xcode_scheme: FastImageTests
-xcode_destination: platform=iOS Simulator,OS=12.1,name=iPhone 6

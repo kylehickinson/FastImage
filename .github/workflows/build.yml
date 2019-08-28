@@ -1,0 +1,15 @@
+name: CI
+
+on: [push]
+
+jobs:
+  test:
+
+    runs-on: macOS-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+    - name: Build and test
+      run: |
+        export DEVELOPER_DIR=/Applications/Xcode_10.3.app/Contents/Developer 
+        set -o pipefail && xcodebuild -project FastImage.xcodeproj -scheme FastImage -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 8,OS=12.4' build test | xcpretty
